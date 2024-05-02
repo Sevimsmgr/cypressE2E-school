@@ -1,0 +1,14 @@
+{
+    "messageName":"AliCan",
+    "messageEmail":"karen.zavior@farmoaks.com",
+    "messageDate":"2024-02-29",
+    "messageSubject":"Info",
+    "messageDeails":"we missed the meeting time due to incomplete information",
+    "name": "arife.",
+    "email": "maxidarvin@falkcia.com",
+    "subject": "Matematik",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "date": "2024-03-21",
+    "getContactURL": "https://managementonschools.com/app/contactMessages/getAll?page=0&size=10&sort=date&type=desc"
+    
+}

@@ -1,0 +1,38 @@
+{
+    "name":"Admin",
+   "surname":"Selme",
+   "birthPlace":"Meram",
+   "gender":"FEMALE",
+   "dateOfBirth":"2001-01-01",
+   "phone":"176-567-8987",
+   "ssn":"890-34-6765",
+   "userName":"AdminSelme",
+   "password":"ACBatch1+",
+   "submitSaveMessage":"Admin Saved",
+   "errorMessage1":"Required",
+   "bosname":" ",
+   "bossurname":" ",
+   "bosbirthPlace":" ",
+   "bosdateOfBirth":" ",
+   "bosphone":" ",
+   "invalidssn1":"856456789",
+   "invalidssn2":"856-45-67877",
+   "invalidssn3":"85645678770",
+   "bosuserName":" ",
+   "invalidpassword1":"Admin12",
+   "invalidpassword2":"admin123",
+   "invalidpassword3":"ADMINCAN123",
+   "errorMessage9":"Minimum 11 character (XXX-XX-XXXX)",
+   "errorMessage10":"At least 8 characters",
+   "invaliSsnMessage":"Please enter valid SSN number",
+   "invaliPasswordMessage":"One lowercase character"
+   
+} 
+   
+   
+
+
+
+
+
+

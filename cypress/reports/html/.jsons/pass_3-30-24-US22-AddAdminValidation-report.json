@@ -1,0 +1,133 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-30T12:54:12.166Z",
+    "end": "2024-03-30T12:54:12.940Z",
+    "duration": 774,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c7c3bc55-61cb-497e-b52d-36051809d26b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\DATABASE-TEST\\US22-AddAdminValidation.cy.js",
+      "file": "cypress\\e2e\\DATABASE-TEST\\US22-AddAdminValidation.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c8ff4ae5-bf3c-40bb-b368-9d33c7d9150c",
+          "title": "US22 AddAdmin Validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Admins List Validation",
+              "fullTitle": "US22 AddAdmin Validation Admins List Validation",
+              "timedOut": null,
+              "duration": 531,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('connectDB', \"select*from admins\").then(data => {\n  console.log(data);\n});",
+              "err": {},
+              "uuid": "7474ba4f-d457-49cd-907e-2d562caccf29",
+              "parentUUID": "c8ff4ae5-bf3c-40bb-b368-9d33c7d9150c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test1",
+              "fullTitle": "US22 AddAdmin Validation Test1",
+              "timedOut": null,
+              "duration": 149,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const expectedAddAdmin = {\n  id: '2080',\n  birth_day: '2000-12-31T23:00:00.000Z',\n  birth_place: \"Meram\",\n  gender: 1,\n  name: \"Admin\",\n  password: \"$2a$10$FZ6TX.BrWpxmv.q14.EVp.0HVJ8AVZ6Wb1oQhNn8hZaEMy.ujNaDO\",\n  phone_number: \"176-567-8987\",\n  ssn: \"890-34-6765\",\n  surname: \"Cemre\",\n  username: \"AdminCemre\",\n  build_in: \"false\",\n  user_role_id: 1\n};\ncy.task('connectDB', \"select * from admins where id='2080'\").then(data => {\n  console.log(data);\n  expect(expectedAddAdmin.id).to.be.equal(data.rows[0].id);\n  expect(expectedAddAdmin.birth_day).to.be.equal(data.rows[0].birth_day);\n  expect(expectedAddAdmin.birth_place).to.be.equal(data.rows[0].birth_place);\n  expect(expectedAddAdmin.gender).to.be.equal(data.rows[0].gender);\n  expect(expectedAddAdmin.name).to.be.equal(data.rows[0].name);\n  expect(expectedAddAdmin.password).to.be.equal(data.rows[0].password);\n  expect(expectedAddAdmin.phone_number).to.be.equal(data.rows[0].phone_number);\n  expect(expectedAddAdmin.ssn).to.be.equal(data.rows[0].ssn);\n  expect(expectedAddAdmin.surname).to.be.equal(data.rows[0].surname);\n  expect(expectedAddAdmin.username).to.be.equal(data.rows[0].username);\n  expect(expectedAddAdmin.user_role_id).to.be.equal(data.rows[0].user_role_id);\n});",
+              "err": {},
+              "uuid": "9766af62-ca29-4792-97f3-e4a7ad1c5fd3",
+              "parentUUID": "c8ff4ae5-bf3c-40bb-b368-9d33c7d9150c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7474ba4f-d457-49cd-907e-2d562caccf29",
+            "9766af62-ca29-4792-97f3-e4a7ad1c5fd3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 680,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "charts": true,
+        "reportPageTitle": "ToolShop Project Report",
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "timestamp": "shortDate",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "ignoreVideos": false,
+        "videoOnFailOnly": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

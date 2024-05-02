@@ -1,0 +1,17 @@
+{
+  "birthDay": "2001-01-01",
+  "birthPlace": "Meram",
+  "built_in": true,
+  "gender": "FEMALE",
+  "name": "Admin",
+  "password": "ACBatch1+",
+  "phoneNumber": "946-564-3457",
+  "ssn": "060-34-0766",
+  "surname": "Aykannnnm",
+  "username": "AdminAykannnnm",
+  "addAdminUrl": "https://managementonschools.com/app/auth/login",
+  "getUrl":"https://managementonschools.com/app/admin/getAll?page=0&size=100&sort=name&type=desc"
+}
+
+
+

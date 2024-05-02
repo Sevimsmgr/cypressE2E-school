@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-03-30T12:52:45.877Z",
+    "end": "2024-03-30T12:52:46.661Z",
+    "duration": 784,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b00193f1-fae0-4051-9d31-16fbecf285cb",
+      "title": "",
+      "fullFile": "cypress\\e2e\\API-TEST\\US21-StudentChooseLessonApi.cy.js",
+      "file": "cypress\\e2e\\API-TEST\\US21-StudentChooseLessonApi.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "65febff1-d000-4abd-b77b-18b899495d57",
+          "title": "US_21 Students, choose lesson, grades and announcement",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "US_21_TC_01 Öğrenci Choose Lesson listesinde; Teacher, Day, Start Time ve Stop Time bilgilerini görebilmeli",
+              "fullTitle": "US_21 Students, choose lesson, grades and announcement US_21_TC_01 Öğrenci Choose Lesson listesinde; Teacher, Day, Start Time ve Stop Time bilgilerini görebilmeli",
+              "timedOut": null,
+              "duration": 426,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.generateToken(vicedeanlogindata.userName, vicedeanlogindata.password).then(token => {\n  console.log(token);\n  cy.request({\n    method: \"GET\",\n    url: \"https://managementonschools.com/app/lessonPrograms/getById/3962\",\n    //getByStudentId/3258\",\n    headers: {\n      Authorization: `${token}`\n    }\n  }).then(response => {\n    expect(response.status).to.eq(200);\n    console.log(response.body);\n    cy.log(JSON.stringify(response.body));\n    expect(response.statusText).to.eq(\"OK\");\n    expect(response.headers[\"content-type\"]).to.include(\"application/json\");\n    expect(response.body.lessonProgramId).to.eq(3962);\n    expect(response.body.startTime).to.eq(\"12:30:00\");\n    expect(response.body.stopTime).to.eq(\"15:30:00\");\n    expect(response.body.lessonName[0].lessonId).to.eq(4460);\n    expect(response.body.lessonName[0].lessonName).to.eq(\"Muggle Studies\");\n    expect(response.body.teachers[1].userId).to.eq(5339);\n    expect(response.body.day).to.eq(\"MONDAY\");\n  });\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttps://managementonschools.com/app/lessonPrograms/getById/3962\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://managementonschools.com/app/lessonPrograms/getById/3962\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Authorization\": \"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbGJ1cyIsImlhdCI6MTcxMTgwMzE2NCwiZXhwIjoxNzExODExODA0fQ.wDlaECYwjn-6fxcIFKJ37o5gtREdlNrJBmFOwpuonUvsv7R0uQTn9W61gQ9tBaoD4Xm7dDBIAb6xBA7TNtFI0Q\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.7.1 Chrome/118.0.5993.159 Electron/27.1.3 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"server\": \"nginx/1.22.0 (Ubuntu)\",\n  \"date\": \"Sat, 30 Mar 2024 12:52:44 GMT\",\n  \"content-type\": \"application/json\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"vary\": \"Origin, Access-Control-Request-Method, Access-Control-Request-Headers\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"cache-control\": \"no-cache, no-store, max-age=0, must-revalidate\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"0\",\n  \"x-frame-options\": \"SAMEORIGIN\"\n}\nBody: {\n  \"message\": \"Error: Lesson with lesson id 3962 not found\",\n  \"statusCode\": 404,\n  \"path\": \"/app/lessonPrograms/getById/3962\",\n  \"timeStamp\": 1711803164581\n}\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://managementonschools.com/app/lessonPrograms/getById/3962\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://managementonschools.com/app/lessonPrograms/getById/3962\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Authorization\": \"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBbGJ1cyIsImlhdCI6MTcxMTgwMzE2NCwiZXhwIjoxNzExODExODA0fQ.wDlaECYwjn-6fxcIFKJ37o5gtREdlNrJBmFOwpuonUvsv7R0uQTn9W61gQ9tBaoD4Xm7dDBIAb6xBA7TNtFI0Q\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.7.1 Chrome/118.0.5993.159 Electron/27.1.3 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\"\n}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"server\": \"nginx/1.22.0 (Ubuntu)\",\n  \"date\": \"Sat, 30 Mar 2024 12:52:44 GMT\",\n  \"content-type\": \"application/json\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"vary\": \"Origin, Access-Control-Request-Method, Access-Control-Request-Headers\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"cache-control\": \"no-cache, no-store, max-age=0, must-revalidate\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"0\",\n  \"x-frame-options\": \"SAMEORIGIN\"\n}\nBody: {\n  \"message\": \"Error: Lesson with lesson id 3962 not found\",\n  \"statusCode\": 404,\n  \"path\": \"/app/lessonPrograms/getById/3962\",\n  \"timeStamp\": 1711803164581\n}\n\n\nhttps://on.cypress.io/request\n    at <unknown> (https://managementonschools.com/__cypress/runner/cypress_runner.js:133123:72)\n    at tryCatcher (https://managementonschools.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://managementonschools.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://managementonschools.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://managementonschools.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://managementonschools.com/__cypress/runner/cypress_runner.js:1701:18)\n    at _drainQueueStep (https://managementonschools.com/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://managementonschools.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://managementonschools.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://managementonschools.com/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress_project_school_management/./cypress/e2e/API-TEST/US21-StudentChooseLessonApi.cy.js:25:15)",
+                "diff": null
+              },
+              "uuid": "7aeee283-d1bd-4cc6-af9f-7a3360841871",
+              "parentUUID": "65febff1-d000-4abd-b77b-18b899495d57",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "US_21_TC_05 Öğrenci danısmanının kendisi için olusturdugu toplantıları görebilmelidir",
+              "fullTitle": "US_21 Students, choose lesson, grades and announcement US_21_TC_05 Öğrenci danısmanının kendisi için olusturdugu toplantıları görebilmelidir",
+              "timedOut": null,
+              "duration": 211,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.on('uncaught:exception', (err, runnable) => {\n  return false;\n});\ncy.generateToken(teacherlogindata.userName, teacherlogindata.password).then(token => {\n  console.log(token);\n  cy.request({\n    method: \"GET\",\n    url: \"https://managementonschools.com/app/meet/getMeetById/2219\",\n    headers: {\n      Authorization: `${token}`\n    }\n  }).then(response => {\n    console.log(response.body);\n    cy.log(JSON.stringify(response.body));\n    expect(response.status).to.eq(200);\n    expect(response.statusText).to.eq(\"OK\");\n    expect(response.headers[\"content-type\"]).to.include(\"application/json\");\n    expect(response.body.object.id).to.eq(2219);\n    expect(response.body.object.description).to.eq(\"You Know Who\");\n    expect(response.body.message).to.eq(\"Meet successfully found\");\n    expect(response.body.httpStatus).to.eq(\"CREATED\");\n  });\n});",
+              "err": {},
+              "uuid": "c82f1522-c7e0-4b25-8133-db57d3f07123",
+              "parentUUID": "65febff1-d000-4abd-b77b-18b899495d57",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c82f1522-c7e0-4b25-8133-db57d3f07123"
+          ],
+          "failures": [
+            "7aeee283-d1bd-4cc6-af9f-7a3360841871"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 637,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "charts": true,
+        "reportPageTitle": "ToolShop Project Report",
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "timestamp": "shortDate",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "ignoreVideos": false,
+        "videoOnFailOnly": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

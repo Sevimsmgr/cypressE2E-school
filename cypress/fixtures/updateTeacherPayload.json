@@ -1,0 +1,16 @@
+{   
+    "birthDay": "1960-11-11",
+    "birthPlace": "Leeds",
+    "email": "potterp@gmail.com",
+    "gender": "FEMALE",
+    "isAdvisorTeacher": "true",
+    "lessonsIdList": [
+      3962
+     ], 
+    "name": "Pomona",
+    "password": "Pomona123.",
+    "phoneNumber": "123-345-6789",
+    "ssn": "456-56-9876",
+    "surname": "Potter",    
+    "username": "Pomona"
+  }

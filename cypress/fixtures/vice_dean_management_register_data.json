@@ -1,0 +1,30 @@
+{
+"name": "Kübra",
+"surName": "Tanribuyurdu",
+"dateOfBirth": "2000-10-10",
+"phone": "577-146-6140",
+"birhtPlace":"Istanbul",
+"gender": "FEMALE",
+"password": "Kubraa_48@",
+"ssn":"345-54-4565",
+"userName":"Vicedean",
+"viceDeanSaved":"Vice dean Saved",
+"errorMessage":"Required",
+"errorMessage2":"Your name must consist of the characters .",
+"errorMessage3":"Your surname must consist of the characters .",
+"errorMessage4":"Please enter valid phone number",
+"errorMessage5":"Your birth place must consist of the characters .",
+"errorMessage6":"Please enter valid phone number",
+"errorMessage7":"Please enter valid SSN number",
+"errorMessage8":"Your username must consist of the characters .",
+"passworderror":"Enter your password",
+"passwordenaz8karakter":"At least 8 characters"
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,48 @@
+{
+    "Name":"Yagmur",
+    "Surname":"Yuksel",
+    "Birth_Place":"Ingolstadt",
+    "Phone":"756-465-5636",
+    "Date_Of_Birth":"1989-12-01",
+    "Ssn":"612-96-4026",
+    "User_Name":"Yagmur08",
+    "Password":"Yagmur01@..",
+    "requiredZorunluAlanMessage":"Required",
+    "GenderFemale":"FEMALE",
+    "GenderMale":"MALE",
+    "Bosname":" ",
+    "Bossurname":" ",
+    "BosBirtPlace":" ",
+    "BosTelefon":" ",
+    "Telefononbirkarakter":"756-465-603",
+    "Telefononuckarakter":"756-465-60356",
+    "requiredtelefonmessage":"Mindestens 12 Zeichen (XXX-XXX-XXXX)",
+    "RequiredTelefonFazlaKarakterMessage":"Bitte geben Sie eine gültige Telefonnummer ein",
+    "BosSsn":" ",
+    "SsnOnKarakter":"108-66-228",
+    "SsnOnikiKarakter":"108-66-22845",
+    "RequiredSSnOnbirkarakterhatamesaji":"Mindestens 11 Zeichen (XXX-XX-XXXX)",
+    "RequiredSsnOnIkiKarakterHatamesaji":"Please enter valid SSN number",
+    "BosUserName":" ",
+    "BosPassword":" ",
+    "PasswordYediKarakter":"Htcgul1",
+    "PasswordRequireduyariyazisiKarakterSayisi":"Mindestens 8 Zeichen",
+    "PasswortAyniTipKarakter":"htcblcssn",
+    "PasswortAyniTipKarakterUyariMessage":"Ein Großbuchstabe",
+    "DogumyiliileriTarihUyaris":"geçmiş bir tarih olmalı",
+    "DogumYIliIleriTarih":"2024-06-01",
+    "requiredBosSurnamemessage":"Your surname must consist of the characters.Your surname should be at least 2 characters",
+    "requiredBosUserNamemessage":"Your username should be at least 4 characters"
+
+
+
+
+
+    
+
+
+    
+
+
+
+}

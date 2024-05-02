@@ -1,0 +1,133 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-30T12:54:00.609Z",
+    "end": "2024-03-30T12:54:01.600Z",
+    "duration": 991,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2a978b9b-107d-4eb1-914a-5230f10f7204",
+      "title": "",
+      "fullFile": "cypress\\e2e\\DATABASE-TEST\\US16-ContactMessageValidation.cy.js",
+      "file": "cypress\\e2e\\DATABASE-TEST\\US16-ContactMessageValidation.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3c6fc3c4-c1ef-4996-9c49-327ffbbeeab6",
+          "title": "US16-contact_message Validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "ContactMessage List Dogrulama",
+              "fullTitle": "US16-contact_message Validation ContactMessage List Dogrulama",
+              "timedOut": null,
+              "duration": 708,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('connectDB', \"select*from contact_message\").then(data => {\n  console.log(data);\n});",
+              "err": {},
+              "uuid": "b088d99e-c696-4965-87f3-bf93c4e3ac98",
+              "parentUUID": "3c6fc3c4-c1ef-4996-9c49-327ffbbeeab6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test1",
+              "fullTitle": "US16-contact_message Validation Test1",
+              "timedOut": null,
+              "duration": 149,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const expectedContactMesage = {\n  id: '3383',\n  date: '2024-02-27T23:00:00.000Z',\n  email: 'frkdrm.28@yandex.com',\n  message: \"ersatgfqae5tq4w35tz6qwe45tertw\",\n  name: \"asdrfsfgs\",\n  subject: \"asrfdarftgaerd\"\n};\ncy.task('connectDB', \"select * from contact_message where id='3383'\").then(data => {\n  console.log(data);\n  expect(expectedContactMesage.id).to.be.equal(data.rows[0].id);\n  expect(expectedContactMesage.date).to.be.equal(data.rows[0].date);\n  expect(expectedContactMesage.email).to.be.equal(data.rows[0].email);\n  expect(expectedContactMesage.message).to.be.equal(data.rows[0].message);\n  expect(expectedContactMesage.name).to.be.equal(data.rows[0].name);\n  expect(expectedContactMesage.subject).to.be.equal(data.rows[0].subject);\n});",
+              "err": {},
+              "uuid": "95aa62f2-fbe7-40e1-a755-487ec34de47e",
+              "parentUUID": "3c6fc3c4-c1ef-4996-9c49-327ffbbeeab6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b088d99e-c696-4965-87f3-bf93c4e3ac98",
+            "95aa62f2-fbe7-40e1-a755-487ec34de47e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 857,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "charts": true,
+        "reportPageTitle": "ToolShop Project Report",
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "timestamp": "shortDate",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "ignoreVideos": false,
+        "videoOnFailOnly": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

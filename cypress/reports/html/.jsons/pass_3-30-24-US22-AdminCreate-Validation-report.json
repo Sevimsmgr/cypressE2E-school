@@ -1,0 +1,133 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-30T12:53:02.905Z",
+    "end": "2024-03-30T12:53:03.707Z",
+    "duration": 802,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "88ff6ff6-e0d5-4fa6-90ba-177d2fc27864",
+      "title": "",
+      "fullFile": "cypress\\e2e\\API-TEST\\US22-AdminCreate-Validation.cy.js",
+      "file": "cypress\\e2e\\API-TEST\\US22-AdminCreate-Validation.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "021ddeac-4e98-4c12-80ce-d427a6fa44f4",
+          "title": "Admin Ekleme",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "US22_TC01 Tüm alanlar geçerli verilerle doldurulduğunda admin yeni admin ekleyebilmelidir",
+              "fullTitle": "Admin Ekleme US22_TC01 Tüm alanlar geçerli verilerle doldurulduğunda admin yeni admin ekleyebilmelidir",
+              "timedOut": null,
+              "duration": 380,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.generateToken(loginData.AdminUsername, loginData.AdminPassword).as(\"authToken\");\ncy.get(\"@authToken\").then(authToken => {\n  const adminData = {\n    birthDay: addadmindata.birthDay,\n    birthPlace: addadmindata.birthPlace,\n    built_in: addadmindata.built_in,\n    gender: addadmindata.gender,\n    name: addadmindata.name,\n    password: addadmindata.password,\n    phoneNumber: fakephoneNumber,\n    ssn: fakeSSN,\n    surname: fakeSurname,\n    username: fakeUsername\n  };\n  cy.addAdmin(authToken, adminData);\n});",
+              "err": {},
+              "uuid": "c06425f7-3ad9-4665-aa0b-a3db92f42564",
+              "parentUUID": "021ddeac-4e98-4c12-80ce-d427a6fa44f4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "US22_TC02 addAdmin Validation",
+              "fullTitle": "Admin Ekleme US22_TC02 addAdmin Validation",
+              "timedOut": null,
+              "duration": 296,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.generateToken(loginData.AdminUsername, loginData.AdminPassword).then(token => {\n  console.log(token);\n  cy.request({\n    method: \"GET\",\n    url: addadmindata.getUrl,\n    headers: {\n      Authorization: `${token}`\n    }\n  }).then(response => {\n    expect(response.status).to.eq(200);\n    console.log(response.body);\n    expect(response.body.content[response.body.content.length - 1]).to.have.property(\"username\");\n    expect(response.body.content[response.body.content.length - 1]).to.have.property(\"ssn\");\n    expect(response.body.content[response.body.content.length - 1]).to.have.property(\"name\");\n    expect(response.body.content[response.body.content.length - 1]).to.have.property(\"surname\");\n    expect(response.body.content[response.body.content.length - 1]).to.have.property(\"birthDay\");\n    expect(response.body.content[response.body.content.length - 1]).to.have.property(\"birthPlace\");\n    expect(response.body.content[response.body.content.length - 1]).to.have.property(\"phoneNumber\");\n    expect(response.body.content[response.body.content.length - 1]).to.have.property(\"gender\");\n    expect(response.body.content[response.body.content.length - 1]).to.have.property(\"built_in\");\n  });\n});",
+              "err": {},
+              "uuid": "1babd3e4-1ceb-4317-9be0-7ee81f23da87",
+              "parentUUID": "021ddeac-4e98-4c12-80ce-d427a6fa44f4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c06425f7-3ad9-4665-aa0b-a3db92f42564",
+            "1babd3e4-1ceb-4317-9be0-7ee81f23da87"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 676,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "charts": true,
+        "reportPageTitle": "ToolShop Project Report",
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "timestamp": "shortDate",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "ignoreVideos": false,
+        "videoOnFailOnly": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
